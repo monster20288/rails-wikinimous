@@ -1,0 +1,13 @@
+<article>
+  <h1>
+    <%= @article.title %>
+    <small>
+      <a href="<%= edit_path %>"><i class="fa fa-pencil"></i></a>
+      <%= link_to article_path(@article),  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+        <i class='fa fa-trash-o'></i>
+      <% end %>
+    </small>
+  </h1>
+  <hr>
+  <p><%= @article.content %></p>
+</article>
